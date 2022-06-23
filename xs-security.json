@@ -1,0 +1,7 @@
+{
+  "xsappname": "sap_eventzion-xsuaa",
+  "tenant-mode": "dedicated",
+  "scopes": [],
+  "attributes": [],
+  "role-templates": []
+}

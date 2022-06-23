@@ -1,0 +1,59 @@
+{
+  "name": "sap_eventzion",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "https://github.com/turutupa/cf-create-app",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^5",
+    "express": "^4",
+    "@sap/cds-dk": "^1.8.5",
+    "hdb": "^0.19.0"
+  },
+  "devDependencies": {
+    "sqlite3": "^4.2.0",
+    "concurrently": "^5.2.0",
+    "mbt": "^1.0.15"
+  },
+  "scripts": {
+    "start": "cds run",
+    "dev:cds": "npx cds watch",
+    "build": "npx mbt build",
+    "dev": "concurrently npm:dev:*",
+    "watch": "npx cds watch",
+    "dev:app": "npm start --prefix app"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "es2020": true,
+      "node": true,
+      "jest": true,
+      "mocha": true
+    },
+    "globals": {
+      "SELECT": true,
+      "INSERT": true,
+      "UPDATE": true,
+      "DELETE": true,
+      "CREATE": true,
+      "DROP": true,
+      "CDL": true,
+      "CQL": true,
+      "CXL": true,
+      "cds": true
+    },
+    "rules": {
+      "no-console": "off",
+      "require-atomic-updates": "off"
+    }
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "hana"
+      }
+    }
+  }
+}
