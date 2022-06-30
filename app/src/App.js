@@ -9,19 +9,25 @@ import Shell from './components/Shell/Shell';
 import Routes from './routes/Routes';
 
 import './App.css';
+import Navbar from '../../../sap_eventzion/src/Navbar';
+import WelcomeBanner from '../../../sap_eventzion/src/WelcomeBanner';
 
 function App() {
   const { t } = useTranslation();
 
   return (
-    <BrowserRouter>
-      <ReactQueryDevtools initialIsOpen={false} />
-      <Helmet title={t('helmet.title.app')} />
-      <Shell title={t('shell.title')} />
-      <ErrorBoundary>
-        <Routes />
-      </ErrorBoundary>
-    </BrowserRouter>
+    // <BrowserRouter>
+    //   <ReactQueryDevtools initialIsOpen={false} />
+    //   <Helmet title={t('helmet.title.app')} />
+    //   <Shell title={t('shell.title')} />
+    //   <ErrorBoundary>
+    //     <Routes />
+    //   </ErrorBoundary>
+    // </BrowserRouter>
+    <div className='App px-5'>
+     <Navbar/>
+     <WelcomeBanner/>
+    </div>
   );
 }
 
